@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<meta charset="UTF-8">
+<body>
+  <table width="100%" bgcolor="#2c3e50" cellpadding="10" cellspacing="0">
+    <tr>
+        <td>
+            <font color="white" size="5"><b>HR Management</b></font>
+            &nbsp;&nbsp;
+            <a href="#"><font color="#ccc">Home</font></a>
+            &nbsp;&nbsp;
+            <a href="#"><font color="#ccc">Contact</font></a>
+        </td>
+
+        <td align="right">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table width="100%">
+    <tr>
+        <td><h2>Employee</h2></td>
+        <td align="right"><button style="background-color: #1e88e5; color: white; padding: 5px 15px;">+ Add</button></td>
+    </tr>
+</table>
+
+<table border="1" width="100%" cellpadding="10" style="border-collapse: collapse;">
+    <tr bgcolor="#fafafa">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Position</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Fatima Beatriz</td>
+        <td>Fatima.Beatriz@gmail.com</td>
+        <td>0985674321</td>
+        <td>Staff</td>
+        <td>
+            <button style="background-color: #ffc107;">Edit</button>
+            <button style="background-color: #dc3545; color: white;">Delete</button>
+        </td>
+    </tr>
+    </table>
+
+    <br><br>
+<table width="600px" border="1" cellspacing="0" cellpadding="0" align="center">
+    <tr bgcolor="#1e88e5">
+        <td colspan="2" style="padding: 10px; color: white;">
+            <b>New Employee</b>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 20px;">
+            <form>
+                <table width="100%" border="0" cellpadding="5">
+                    <tr>
+                        <td>
+                            <label>Name</label><br>
+                            <input type="text" style="width: 100%;">
+                        </td>
+                        <td>
+                            <label>Email</label><br>
+                            <input type="email" style="width: 100%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Phone</label><br>
+                            <input type="text" style="width: 100%;">
+                        </td>
+                        <td>
+                            <label>Position</label><br>
+                            <select style="width: 100%;">
+                                <option>-- Select Position --</option>
+                                <option>Staff</option>
+                                <option>Manager</option>
+                                <option>CEO</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Sex</label><br>
+                            <input type="radio" name="gender"> Male
+                            <input type="radio" name="gender"> Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right" style="border-top: 1px solid #ccc; padding-top: 15px;">
+                            <button type="submit" style="background-color: #28a745; color: white; padding: 5px 15px;">Save</button>
+                            <button type="button" style="background-color: #6c757d; color: white; padding: 5px 15px;">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
