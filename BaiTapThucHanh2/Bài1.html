@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 - Contact Form Flexbox</title>
+    <link rel="stylesheet" href="Bài1CSS.css">
+</head>
+<body>
+
+    <div class="form-wrapper">
+        <h3>Get in touch with us by filling contact form below</h3>
+
+        <form class="contact-form">
+
+            <!-- Hàng 1: Name & Email -->
+            <div class="row">
+                <input type="text" placeholder="* Enter your full name">
+                <input type="email" placeholder="* Enter your email address">
+            </div>
+
+            <!-- Hàng 2: Subject -->
+            <div class="row">
+                <input type="text" placeholder="Enter your subject">
+            </div>
+
+            <!-- Hàng 3: Message -->
+            <div class="row">
+                <textarea placeholder="* Your message here..."></textarea>
+            </div>
+
+            <!-- Hàng 4: Button + Note -->
+            <div class="row bottom-row">
+                <button type="submit">Send message</button>
+                <span class="note">
+                    * Please fill all required form field, thanks!
+                </span>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

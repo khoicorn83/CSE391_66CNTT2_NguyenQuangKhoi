@@ -1,0 +1,71 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+/* Khung bao ngoài */
+.wrapper {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    border: 2px solid #8fd3ff;
+}
+
+/* Tiêu đề */
+.wrapper h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+
+/* Nội dung chính */
+.content {
+    display: flex;              /* Flexbox */
+    gap: 40px;
+}
+
+/* Card bên trái */
+.card {
+    width: 320px;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Tác giả */
+.author {
+    margin-top: 20px;
+}
+
+.author span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Cột phải */
+.text {
+    flex: 1;                   /* Chiếm phần còn lại */
+}
+
+.text p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}

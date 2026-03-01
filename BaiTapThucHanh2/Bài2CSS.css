@@ -1,0 +1,107 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: #2c0f2f;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: transparent;
+    color: #ffd966;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.nav a {
+    color: #ffd966;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 400px;
+    background-image: url("https://picsum.photos/1200/500");
+    background-size: cover;
+    background-position: center;
+    display: flex;                 /* Flexbox */
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    background: rgba(0,0,0,0.6);
+    padding: 30px 40px;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    margin-bottom: 10px;
+}
+
+.hero-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ffd966;
+    border: none;
+    cursor: pointer;
+}
+
+/* HIGHLIGHTS */
+.highlights {
+    background: #eaf7ff;
+    padding: 40px;
+    text-align: center;
+}
+
+.highlights h2 {
+    margin-bottom: 30px;
+}
+
+.highlight-list {
+    display: flex;                  /* Flexbox */
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    width: 300px;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card p {
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer span {
+    margin: 0 10px;
+    font-size: 20px;
+}
