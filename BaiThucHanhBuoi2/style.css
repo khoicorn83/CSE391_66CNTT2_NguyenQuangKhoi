@@ -1,0 +1,231 @@
+/* TODO 1: Dùng universal selector để reset margin và padding về 0 cho toàn trang */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* TODO 2: Dùng type selector cho body */
+/* Yêu cầu: font-family: Arial; background-color: #f5f5f5; */
+/* TODO 2: Dùng type selector cho body */
+body {
+  font-family: Arial;
+  background-color: #f5f5f5;
+}
+
+/* TODO 3: Dùng ID selector cho #main-header */
+/* Yêu cầu: background-color: #333; color: white; text-align: center; padding: 20px; */
+#main-header{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* TODO 4: Dùng class selector cho .nav-link */
+/* Yêu cầu: color: #333; text-decoration: none; padding: 10px 15px; */
+.nav-link{
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* TODO 5: Dùng group selector cho h1, h2, h3 */
+/* Yêu cầu: font-family: 'Georgia', serif; */
+h1, h2, h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* TODO 6: Dùng descendant selector cho nav a */
+/* Yêu cầu: display: inline-block; margin: 0 10px; */
+/* TODO 6: Dùng descendant selector cho nav a */
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* TODO 7: Dùng pseudo-class selector cho a:hover */
+/* Yêu cầu: color: #ff6600; background-color: #eee; */
+/* TODO 7: Dùng pseudo-class selector cho a:hover */
+a:hover {
+  color: #ff6600;
+  background-color: #eee;
+}
+
+/* Bước 1: Reset box-sizing cho toàn trang */
+* {
+    box-sizing: border-box;
+}
+
+/* Bước 2: Style cho .posts container */
+.posts {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Bước 3: Style cho .card */
+.card {
+    width: calc(31% - 20px); 
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 1%;
+    background: white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+/* Bước 4: Style cho .btn */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: #0056b3
+}
+
+/* Cải tiến nav bằng Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+}
+
+/* Cải tiến .posts bằng Flexbox */
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.card {
+    flex: 1 1 300px;
+    /*(hoặc flex: 1 1 300px cho responsive tự động) */
+}
+
+/* Responsive: Khi màn hình < 768px, card chiếm full width */
+@media (max-width: 768px) {
+    .posts {
+        flex-direction: column;
+    }
+    
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.item {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       color: white;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 150px;
+       font-size: 2rem;
+       border-radius: 8px;
+}
+
+/* Responsive: Tự động giảm cột khi màn hình nhỏ */
+.gallery {
+    /* TODO: Dùng auto-fit/auto-fill */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Desktop First: Áp dụng cho màn hình <= 768px (Tablet & Mobile) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Menu chuyển sang dạng cột [cite: 170] */
+    }
+
+    .posts {
+        flex-direction: column; /* Các bài viết xếp chồng lên nhau [cite: 115] */
+    }
+
+    .card {
+        width: 100%; /* Card chiếm trọn bề ngang [cite: 115] */
+    }
+}
+
+/* Mobile First: Áp dụng cho màn hình >= 768px (Desktop) */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row; /* Menu nằm ngang khi có không gian rộng */
+        justify-content: center;
+    }
+
+    .posts {
+        flex-direction: row; /* Chuyển thành hàng ngang cho máy tính [cite: 117] */
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 0 0 calc(33.33% - 20px); /* Chia làm 3 cột [cite: 114] */
+    }
+}
+
+/* Header sticky */
+.sticky-header {
+    position: sticky; /* Giữ phần tử ở vị trí cố định khi cuộn đến */
+    top: 0;
+    z-index: 100;
+    /* TODO: Thêm box-shadow để tạo hiệu ứng nổi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Nút Scroll to Top */
+.scroll-top {
+    position: fixed; /* Cố định so với cửa sổ trình duyệt */
+    bottom: 30px;
+    right: 30px;
+    /* TODO: Các thuộc tính định dạng nút */
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%; /* Tạo hình tròn */
+    display: flex; /* Sử dụng Flexbox để căn giữa nội dung bên trong */
+    justify-content: center; /* Căn giữa theo trục ngang */
+    align-items: center; /* Căn giữa theo trục dọc */
+    text-decoration: none;
+    font-size: 24px;
+    transition: all 0.3s ease; /* Thêm hiệu ứng mượt mà */
+}
+
+.scroll-top:hover {
+    /* TODO: Hiệu ứng khi di chuột qua */
+    background: #0056b3; 
+    transform: scale(1.1); /* Phóng to nhẹ nút khi hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        /* TODO: Chuyển menu từ hàng ngang sang cột dọc [cite: 169, 170] */
+        display: flex;
+        flex-direction: column; 
+        align-items: center; /* Căn giữa các mục menu khi xếp dọc */
+        gap: 10px; /* Khoảng cách giữa các link menu */
+    }
+}
+
+
